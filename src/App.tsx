@@ -2,9 +2,11 @@ import React from 'react';
 import { HeaderNav, HeroImg, MainBody, WorkCard } from './components';
 import { getAge } from './helpers';
 
+import brandIcon from './images/icon.svg';
+
 const App = () => (
   <React.StrictMode>
-    <HeaderNav brand="Kaidan Gustave">
+    <HeaderNav brand={{ name: 'Kaidan Gustave', img: brandIcon }}>
       <HeaderNav.Item href="#about-me" label="About Me" />
       <HeaderNav.Item href="#work" label="Work" />
     </HeaderNav>

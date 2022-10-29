@@ -1,10 +1,15 @@
 .navbar {
-  @include gradient-y(lighten($primary, 10%), $primary)
+  @include gradient-y(lighten($primary, 10%), $primary);
 }
 
 .navbar .navbar-brand,
 .navbar .navbar-nav .nav-item {
   color: $highlight;
+}
+
+.navbar-brand-icon {
+  height: 70px;
+  width: 70px;
 }
 
 .navbar .navbar-toggler {
