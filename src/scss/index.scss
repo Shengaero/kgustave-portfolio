@@ -1,0 +1,17 @@
+$primary: #894921;
+$highlight: rgb(255, 250, 226);
+
+@import "~bootstrap/scss/bootstrap";
+
+.bg-highlight {
+  background-color: $highlight !important;
+}
+
+.text-highlight {
+  color: $highlight !important;
+}
+
+@import "./HeaderNav.scss";
+@import "./HeroImg.scss";
+@import "./WorkCard.scss";
+@import "./MainBody.scss";

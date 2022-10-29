@@ -1,0 +1,18 @@
+main {
+  color: $highlight;
+  @include gradient-y($primary, lighten($primary, 20%));
+}
+
+main section h2,
+main section .vr,
+main section p {
+  color: $highlight;
+}
+
+@media(max-width: 992px) {
+  .vr {
+    height: 1px;
+    min-height: 1px;
+    visibility: hidden;
+  }
+}

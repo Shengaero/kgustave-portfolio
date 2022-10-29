@@ -1,0 +1,16 @@
+.navbar {
+  @include gradient-y(lighten($primary, 10%), $primary)
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-item {
+  color: $highlight;
+}
+
+.navbar .navbar-toggler {
+  border-color: $highlight !important;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url('./download.svg') !important;
+}
