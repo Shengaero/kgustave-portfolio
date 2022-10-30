@@ -1,12 +1,40 @@
-.card img {
-  height: 100%;
-  width: auto;
+@mixin card-transition() {
+  transition: border 0.15s ease-in-out;
 }
 
-.work-card-large {
-  height: 24vh;
+.card {
+  @include card-transition();
+  border-color: $secondary-text-color;
+
+  .card-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .card-img-overlay {
+    @include card-transition();
+
+    .card-link {
+      @include card-transition();
+      z-index: 1;
+    }
+  }
+
+  .card-img-overlay:hover {
+    background-color: rgba($primary, 0.2);
+  }
 }
 
-.work-card-medium {
-  height: 12vh;
+.card:hover {
+  border-color: $primary;
+}
+
+.card-large {
+  height: 50%vw;
+  max-width: 1280px;
+}
+
+.card-medium {
+  height: 50%vw;
+  max-width: 640px;
 }

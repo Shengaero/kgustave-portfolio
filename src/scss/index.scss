@@ -1,16 +1,31 @@
-$primary: #894921;
-$highlight: rgb(255, 250, 226);
+$primary-color: #894921;
+$primary-text-color: #ffffff;
+$secondary-color: #D0E7EF;
+$secondary-text-color: #000000;
 
-@import "~bootstrap/scss/bootstrap";
+// BOOTSTRAP //
+// reboot
+@import "~bootstrap/scss/bootstrap-reboot";
+// bootstrap libraries
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/helpers";
+// utilities api
+@import "~bootstrap/scss/utilities/api";
 
-.bg-highlight {
-  background-color: $highlight !important;
-}
+// // FONTAWESOME
+// @import "~fontawesome-free/scss/variables";
+// @import "~fontawesome-free/scss/icons";
 
-.text-highlight {
-  color: $highlight !important;
-}
-
+@import "./NavItem.scss";
 @import "./HeaderNav.scss";
 @import "./HeroImg.scss";
 @import "./WorkCard.scss";

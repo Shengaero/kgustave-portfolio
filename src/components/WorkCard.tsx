@@ -13,7 +13,7 @@ export default function WorkCard({ title, size, placement, link, img, className 
   const placementClasses = placement === 'left' ? ' me-sm-2' : placement === 'right' ? ' ms-sm-2' : '';
   return (
     <Card className={
-      `work-card-${size} flex-fill my-1 my-sm-0`.concat(
+      `card-${size} flex-fill my-1 my-sm-0`.concat(
         placementClasses,
         className ? ` ${className}` : ''
       )
@@ -21,7 +21,7 @@ export default function WorkCard({ title, size, placement, link, img, className 
       <Card.Img src={img} alt="/" />
       <Card.ImgOverlay>
         <Card.Body>
-          <Card.Link href={link || '/'} className="text-highlight text-decoration-none stretched-link">
+          <Card.Link href={link || '/'} className="text-decoration-none stretched-link">
             <Card.Title>{title}</Card.Title>
           </Card.Link>
         </Card.Body>

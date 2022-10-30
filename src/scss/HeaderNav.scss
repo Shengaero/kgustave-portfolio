@@ -1,21 +1,20 @@
 .navbar {
-  @include gradient-y(lighten($primary, 10%), $primary);
-}
+  @include gradient-y($primary-color, lighten($primary-color, 10%));
 
-.navbar .navbar-brand,
-.navbar .navbar-nav .nav-item {
-  color: $highlight;
-}
+  .navbar-brand {
+    color: $primary-text-color !important;
 
-.navbar-brand-icon {
-  height: 70px;
-  width: 70px;
-}
+    .navbar-brand-icon {
+      height: 70px;
+      width: 70px;
+    }
+  }
 
-.navbar .navbar-toggler {
-  border-color: $highlight !important;
-}
+  .navbar-toggler {
+    border-color: $primary-text-color !important;
+  }
 
-.navbar .navbar-toggler-icon {
-  background-image: url('./download.svg') !important;
+  .navbar-toggler-icon {
+    background-image: url('../images/burger.svg') !important;
+  }
 }

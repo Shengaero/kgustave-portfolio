@@ -1,18 +1,24 @@
 main {
-  color: $highlight;
-  @include gradient-y($primary, lighten($primary, 20%));
-}
+  color: $secondary-text-color;
+  background-color: $secondary-color;
 
-main section h2,
-main section .vr,
-main section p {
-  color: $highlight;
-}
+  section {
+    * {
+      color: inherit;
+    }
 
-@media(max-width: 992px) {
-  .vr {
-    height: 1px;
-    min-height: 1px;
-    visibility: hidden;
+    @media(max-width: 992px) {
+      .vr {
+        height: 1px;
+        min-height: 1px;
+        visibility: hidden;
+      }
+    }
   }
+}
+
+.work-content {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
