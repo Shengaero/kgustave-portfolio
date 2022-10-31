@@ -64,11 +64,13 @@ const App = () => (
             size="medium"
           />
           <WorkCard
-            title="Another Example"
+            title="JDA Utilities"
             placement="right"
-            link="https://github.com/shengaero"
-            img={brandBanner}
+            link="https://github.com/jagrosh/jda-utilities"
+            img="./images/jda.png"
             size="medium"
+            className="card-jda-utilities"
+            imgClassName="w-50 align-self-center"
           />
         </WorkCard.Row>
       </MainBody.Section>

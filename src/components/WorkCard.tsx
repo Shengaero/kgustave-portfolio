@@ -7,9 +7,10 @@ type WorkCardProps = {
   link?: string;
   img?: string;
   className?: string;
+  imgClassName?: string;
 };
 
-export default function WorkCard({ title, size, placement, link, img, className }: WorkCardProps) {
+export default function WorkCard({ title, size, placement, link, img, className, imgClassName }: WorkCardProps) {
   const placementClasses = placement === 'left' ? ' me-sm-2' : placement === 'right' ? ' ms-sm-2' : '';
   return (
     <Card className={
@@ -18,7 +19,7 @@ export default function WorkCard({ title, size, placement, link, img, className 
         className ? ` ${className}` : ''
       )
     }>
-      <Card.Img src={img} alt="/" />
+      <Card.Img src={img} alt="/" className={imgClassName || ''} />
       <Card.ImgOverlay>
         <Card.Body>
           <Card.Link href={link || '/'} target="_blank" className="text-decoration-none stretched-link">
