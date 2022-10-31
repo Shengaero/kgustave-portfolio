@@ -1,6 +1,4 @@
-const ghpages = require('gh-pages');
-
-ghpages.publish('./build', {
+require('gh-pages').publish('./build', {
   branch: 'gh-pages'
 }, (err) => {
   if(err) {
@@ -8,4 +6,4 @@ ghpages.publish('./build', {
     return;
   }
   console.log('Published!');
-})
+});
