@@ -5,7 +5,7 @@ import { HeaderNav, HeroImg, MainBody, WorkCard, ContactInfo, Footer } from './c
 import { getAge } from './helpers';
 
 const brandIcon = './images/icon_192x192.png';
-const brandBanner = './images/icon_banner.png';
+const brandBanner = './images/icon_banner_1280x640.png';
 
 const App = () => (
   <React.StrictMode>
