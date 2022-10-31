@@ -1,9 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid, brands, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { HeaderNav, HeroImg, MainBody, WorkCard, ContactInfo, Footer } from './components';
 import { getAge } from './helpers';
 
-import brandIcon from './images/icon.svg';
-
+const brandIcon = './images/icon_192x192.png';
 const brandBanner = './images/icon_banner.png';
 
 const App = () => (
@@ -13,7 +14,9 @@ const App = () => (
       <HeaderNav.Item href="#work" color="primary" label="Work" />
       <HeaderNav.Item href="#contact" color="primary" label="Contact" />
     </HeaderNav>
+
     <HeroImg src={brandBanner} />
+
     <MainBody>
       <MainBody.Section id="about-me" label="About Me">
         <p className="mb-2">
@@ -71,15 +74,29 @@ const App = () => (
       </MainBody.Section>
       <MainBody.Section id="contact" label="Contact">
         <ContactInfo>
-          <ContactInfo.Item href="/" color="secondary" label="E-Mail">
+          <ContactInfo.Item href="tel:18477510988" color="secondary" label="847-751-0988">
+            <FontAwesomeIcon icon={solid('phone')} />
           </ContactInfo.Item>
-          <ContactInfo.Item href="/" color="secondary" label="Test 2" />
-          <ContactInfo.Item href="/" color="secondary" label="Test 3" />
-          <ContactInfo.Item href="/" color="secondary" label="Test 4" />
+          <ContactInfo.Item href="mailto:kaidangustave@yahoo.com" newTab={true} color="secondary" label="E-Mail">
+            <FontAwesomeIcon icon={regular('envelope')} />
+          </ContactInfo.Item>
+          <ContactInfo.Item href="https://twitter.com/Shengaero" newTab={true} color="secondary" label="Twitter">
+            <FontAwesomeIcon icon={brands('twitter')} />
+          </ContactInfo.Item>
+          <ContactInfo.Item href="https://github.com/Shengaero" newTab={true} color="secondary" label="GitHub">
+            <FontAwesomeIcon icon={brands('github')} />
+          </ContactInfo.Item>
+          <ContactInfo.Item href="https://discord.com/channels/@me" newTab={true} color="secondary" label="Discord">
+            <FontAwesomeIcon icon={brands('discord')} />
+          </ContactInfo.Item>
         </ContactInfo>
       </MainBody.Section>
     </MainBody>
-    <Footer name="Kaidan Gustave" />
+
+    <Footer
+      name="Kaidan Gustave"
+      license="https://github.com/Shengaero/shengaero.github.io/blob/main/LICENSE"
+    />
   </React.StrictMode>
 );
 

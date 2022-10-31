@@ -4,9 +4,20 @@
   .navbar-brand {
     color: $primary-text-color !important;
 
+    h1 {
+      @media (max-width: 356px) {
+        display: none;
+      }
+    }
+
     .navbar-brand-icon {
       height: 70px;
       width: 70px;
+
+      @media (max-width: 992px) {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
 
@@ -14,7 +25,7 @@
     border-color: $primary-text-color !important;
   }
 
-  .navbar-toggler-icon {
-    background-image: url('../images/burger.svg') !important;
-  }
+  // .navbar-toggler-icon {
+  //   background-image: url('../images/burger.svg') !important;
+  // }
 }

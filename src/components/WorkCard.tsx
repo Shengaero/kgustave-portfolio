@@ -21,7 +21,7 @@ export default function WorkCard({ title, size, placement, link, img, className 
       <Card.Img src={img} alt="/" />
       <Card.ImgOverlay>
         <Card.Body>
-          <Card.Link href={link || '/'} className="text-decoration-none stretched-link">
+          <Card.Link href={link || '/'} target="_blank" className="text-decoration-none stretched-link">
             <Card.Title>{title}</Card.Title>
           </Card.Link>
         </Card.Body>

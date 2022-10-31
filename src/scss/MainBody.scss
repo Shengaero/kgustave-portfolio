@@ -9,9 +9,7 @@ main {
 
     @media(max-width: 992px) {
       .vr {
-        height: 1px;
-        min-height: 1px;
-        visibility: hidden;
+        display: none;
       }
     }
   }

@@ -11,18 +11,14 @@ type HeaderNavProps = React.PropsWithChildren & {
 
 const HeaderNav = ({ brand, children }: HeaderNavProps) => (
   <header>
-    <Navbar variant="dark" expand="lg" bg="primary">
+    <Navbar variant="dark" expand="lg">
       <Container fluid className="d-flex flex-row-reverse flex-lg-row justify-content-between">
-        <Navbar.Brand className='d-flex h1 fs-2 mb-0' href="/">
-          <img
-            className="navbar-brand-icon"
-            src={brand.img.toString()}
-            alt="Logo"
-          />
-          <span className="align-self-center">{brand.name}</span>
+        <Navbar.Brand className='d-flex flex-row-reverse flex-lg-row me-0 me-lg-2 mb-0 fs-2' href="/">
+          <img className="navbar-brand-icon" src={brand.img.toString()} alt="Logo" />
+          <h1 className="align-self-center mb-0">{brand.name}</h1>
         </Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse>
+        <Navbar.Collapse className="justify-content-end">
           <Nav as="ol">
             {children}
           </Nav>

@@ -1,5 +1,7 @@
 const HeroImg = (props: { src: string | URL; }) => (
-  <img className="hero-img" src={props.src.toString()} alt="/" />
+  <div className="d-flex hero">
+    <img className="m-auto hero-img" src={props.src.toString()} alt="/" />
+  </div>
 );
 
 export default HeroImg;

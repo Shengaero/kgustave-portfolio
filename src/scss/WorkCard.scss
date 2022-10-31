@@ -1,10 +1,10 @@
-@mixin card-transition() {
-  transition: border 0.15s ease-in-out;
+@mixin card-transition($type) {
+  transition: #{$type} 0.15s ease-in-out;
 }
 
 .card {
-  @include card-transition();
   border-color: $secondary-text-color;
+  @include card-transition(border);
 
   .card-img {
     height: 100%;
@@ -12,11 +12,15 @@
   }
 
   .card-img-overlay {
-    @include card-transition();
+    @include card-transition(background-color);
 
     .card-link {
-      @include card-transition();
       z-index: 1;
+      @include card-transition(color);
+    }
+
+    .card-link:hover {
+      color: $secondary-text-color;
     }
   }
 

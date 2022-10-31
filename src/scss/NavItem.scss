@@ -15,13 +15,14 @@
   }
 }
 
-@mixin hoverable-nav-item($starting-color) {
+@mixin hoverable-nav-item($starting-color, $end-color: mix($starting-color, $primary, 20%)) {
   .nav-link {
     color: $starting-color !important;
   }
 
   .nav-link:hover {
-    color: mix($starting-color, $primary, 20%) !important;
+    color: $end-color !important;
+    border-color: $end-color !important;
   }
 }
 

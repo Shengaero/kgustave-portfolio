@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kaidan Gustave",
+  "name": "Kaidan Gustave",
   "icons": [
     {
       "src": "./favicon.ico",
@@ -8,24 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "./images/icon_192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "./images/icon_512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    },
-    {
       "src": "./images/icon_1024x1024.png",
       "type": "image/png",
-      "sizes": "1024x1024"
+      "sizes": "1024x1024 512x512 256x256 192x192 96x96 70x70"
     },
     {
-      "src": "./images/icon_banner.png",
+      "src": "./images/icon_banner_1280x640.png",
       "type": "image/png",
-      "sizes": "1280x640"
+      "sizes": "1280x640 1024x544"
     }
   ],
   "start_url": ".",
