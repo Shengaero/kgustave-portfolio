@@ -16,10 +16,6 @@
 
     .card-link {
       z-index: 1;
-      @include card-transition(color);
-    }
-
-    .card-link:hover {
       color: $secondary-text-color;
     }
   }
