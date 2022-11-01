@@ -8,7 +8,7 @@ const brandIcon = './images/icon_192x192.png';
 const brandBanner = './images/icon_banner_1280x640.png';
 
 const App = () => (
-  <React.StrictMode>
+  <>
     <HeaderNav brand={{ name: 'Kaidan Gustave', img: brandIcon }}>
       <HeaderNav.Item href="#about-me" color="primary" label="About Me" />
       <HeaderNav.Item href="#work" color="primary" label="Work" />
@@ -97,7 +97,7 @@ const App = () => (
       name="Kaidan Gustave"
       license="https://github.com/Shengaero/shengaero.github.io/blob/main/LICENSE"
     />
-  </React.StrictMode>
+  </>
 );
 
 export default App;
