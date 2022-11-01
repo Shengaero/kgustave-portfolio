@@ -1,5 +1,5 @@
 .navbar {
-  @include gradient-y($primary-color, lighten($primary-color, 10%));
+  @include header-gradient();
 
   .navbar-brand {
     color: $primary-text-color !important;

@@ -12,14 +12,21 @@ $secondary-text-color: #000000;
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/card";
+@import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/helpers";
 // utilities api
 @import "~bootstrap/scss/utilities/api";
+
+@mixin header-gradient() {
+  @include gradient-y($primary-color, lighten($primary-color, 10%));
+}
 
 // // FONTAWESOME
 // @import "~fontawesome-free/scss/variables";
@@ -30,4 +37,5 @@ $secondary-text-color: #000000;
 @import "./HeroImg.scss";
 @import "./WorkCard.scss";
 @import "./MainBody.scss";
-@import "./Footer.scss";
+@import "./SocialFooter.scss";
+@import "./ContactForm.scss";

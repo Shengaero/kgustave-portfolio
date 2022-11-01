@@ -15,7 +15,7 @@
     "rules": {
         "semi": [ "warn", "always" ],
         "semi-spacing": [ "error", { "before": false } ],
-        "indent": [ "warn", 2 ],
+        "indent": [ "warn", 2, { "SwitchCase": 1 } ],
 
         "quotes": [ "warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true } ],
         "quote-props": [ "warn", "as-needed" ],
@@ -31,7 +31,8 @@
                     "if": { "after": false },
                     "for": { "after": false },
                     "try": { "after": true },
-                    "catch": { "after": false }
+                    "catch": { "after": false },
+                    "switch": { "after": false }
                 }
             }
         ],

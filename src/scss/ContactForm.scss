@@ -1,0 +1,24 @@
+.contact-form .modal-form {
+  background-color: $secondary-color;
+
+  .modal-header {
+    @include header-gradient();
+
+    .modal-title {
+      color: $primary-text-color;
+    }
+  }
+
+  .modal-body {
+    list-style-type: none;
+
+    .modal-form-message {
+      height: 300px;
+      resize: none;
+    }
+  }
+
+  .modal-footer {
+    justify-content: space-between;
+  }
+}
