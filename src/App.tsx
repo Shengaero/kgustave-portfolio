@@ -98,7 +98,7 @@ export default function App() {
 
       {/* The main body of the page will get rendered in differently depending on which route the request is hitting */}
       <MainBody>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             {/* About Me Page (Main Landing Page) */}
             <Route index element={AppAboutMeSection()} />
