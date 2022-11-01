@@ -34,16 +34,13 @@
 }
 
 .card-large {
-  height: 50%vw;
+  height: 100%;
   max-width: 1280px;
+  max-height: 640px;
 }
 
 .card-medium {
-  height: 50%vw;
+  height: 100%;
   max-width: 640px;
   max-height: 320px;
-}
-
-.card-jda-utilities {
-  background-image: linear-gradient(167deg, #9A4BDC, #5625BA);
 }

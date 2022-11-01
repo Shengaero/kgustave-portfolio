@@ -67,10 +67,8 @@ const App = () => (
             title="JDA Utilities"
             placement="right"
             link="https://github.com/jagrosh/jda-utilities"
-            img="./images/jda.png"
+            img="./images/jda_banner_1280x640.png"
             size="medium"
-            className="card-jda-utilities"
-            imgClassName="w-50 align-self-center"
           />
         </WorkCard.Row>
       </MainBody.Section>
