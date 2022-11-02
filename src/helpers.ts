@@ -4,7 +4,7 @@ export function getYear(): number {
 
 export function getAge(): number {
   const date = new Date();
-  let age = date.getFullYear() - new Date('12-14-1998').getFullYear();
+  let age = date.getFullYear() - new Date('1998-12-14').getFullYear();
   if(date.getMonth() < 12 && date.getDay() < 14) {
     age--;
   }
