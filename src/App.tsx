@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HeaderNav, HeroImg, MainBody, WorkCard, SocialFooter, ContactForm } from './components';
+import { HeaderNav, HeroImg, MainBody, WorkCard, SocialFooter } from './components';
 import { getAge } from './helpers';
 
 // various brand icons
@@ -27,42 +26,26 @@ const AppWorkSection = () => (
   <MainBody.Section label="Work" headerAlign="top" className="flex-column work-content">
     <WorkCard.Row className="my-sm-2">
       <WorkCard
-        title="Example"
+        title="Glimpse"
         placement="center"
-        link="https://github.com/shengaero"
-        img={brandBanner}
+        link="https://github.com/shengaero/glimpse"
+        img="./images/glimpse_banner_1280x640.png"
         size="large"
       />
     </WorkCard.Row>
     <WorkCard.Row className="my-sm-2">
       <WorkCard
-        title="Another Example"
-        placement="left"
-        link="https://github.com/shengaero"
-        img={brandBanner}
-        size="medium"
-      />
-      <WorkCard
-        title="Another Example"
-        placement="right"
-        link="https://github.com/shengaero"
-        img={brandBanner}
-        size="medium"
-      />
-    </WorkCard.Row>
-    <WorkCard.Row className="my-sm-2">
-      <WorkCard
-        title="Another Example"
-        placement="left"
-        link="https://github.com/shengaero"
-        img={brandBanner}
-        size="medium"
-      />
-      <WorkCard
         title="JDA Utilities"
-        placement="right"
+        placement="left"
         link="https://github.com/jagrosh/jda-utilities"
         img="./images/jda_banner_1280x640.png"
+        size="medium"
+      />
+      <WorkCard
+        title="shengaero.github.io"
+        placement="right"
+        link="https://github.com/shengaero/shengaero.github.io"
+        img={brandBanner}
         size="medium"
       />
     </WorkCard.Row>
@@ -71,27 +54,13 @@ const AppWorkSection = () => (
 
 export default function App() {
   // State setup for contact form modal controls
-  const [modalShow, setModalShow] = useState(false);
-  const handleClose = () => setModalShow(false);
-  const handleShow = () => setModalShow(true);
-
   return (
     <>
       {/* Header navbar present on all pages */}
       <HeaderNav brand={{ name: 'Kaidan Gustave', img: brandIcon }}>
         <HeaderNav.Item type="link" href="/" color="primary" label="About Me" />
         <HeaderNav.Item type="link" href="/work" color="primary" label="Work" />
-        <HeaderNav.Item type="modal" color="primary" label="Contact"
-          modalClassName="contact-form"
-          show={modalShow}
-          handleClose={handleClose}
-          handleShow={handleShow}>
-          <ContactForm
-            title="Contact"
-            show={modalShow}
-            handleClose={handleClose}
-          />
-        </HeaderNav.Item>
+        <HeaderNav.Item type="link" href="mailto:kaidangustave@yahoo.com" color="primary" label="Contact" />
       </HeaderNav>
 
       <HeroImg src={brandBanner} />
@@ -104,8 +73,8 @@ export default function App() {
             <Route index element={AppAboutMeSection()} />
             {/* Work Page */}
             <Route path="/work" element={AppWorkSection()} />
-            {/* TODO: lead this default path to 404 */}
-            <Route path="/*" element={<div>test</div>} />
+            {/* 404 */}
+            <Route path="/*" element={<div>Uh oh. Nothing's here!</div>} />
           </Routes>
         </BrowserRouter>
       </MainBody>
