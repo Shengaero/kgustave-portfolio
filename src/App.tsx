@@ -26,11 +26,20 @@ const AppWorkSection = () => (
   <MainBody.Section label="Work" headerAlign="top" className="flex-column work-content">
     <WorkCard.Row className="my-sm-2">
       <WorkCard
+        title="The Dates Group"
+        placement="left"
+        link="https://github.com/The-Dates-Group/the-dates-group"
+        img="./images/the_dates_group_banner_1280x640.png"
+        size="medium"
+        lightText
+      />
+      <WorkCard
         title="Glimpse"
-        placement="center"
+        placement="right"
         link="https://github.com/shengaero/glimpse"
         img="./images/glimpse_banner_1280x640.png"
-        size="large"
+        size="medium"
+        lightText
       />
     </WorkCard.Row>
     <WorkCard.Row className="my-sm-2">
@@ -60,7 +69,7 @@ export default function App() {
       <HeaderNav brand={{ name: 'Kaidan Gustave', img: brandIcon }}>
         <HeaderNav.Item type="link" href="/" color="primary" label="About Me" />
         <HeaderNav.Item type="link" href="/work" color="primary" label="Work" />
-        <HeaderNav.Item type="link" href="mailto:kaidangustave@yahoo.com" color="primary" label="Contact" />
+        {/*<HeaderNav.Item type="link" href="mailto:kaidangustave@yahoo.com" color="primary" label="Contact" />*/}
       </HeaderNav>
 
       <HeroImg src={brandBanner} />
